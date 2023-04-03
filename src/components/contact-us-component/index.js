@@ -49,7 +49,7 @@ export const Contact = () => {
                 <div className="control-group">
                   <input
                     type="text"
-                    className="form-control"
+                    className="form-control border-secondary"
                     id="name"
                     value={name}
                     onChange={handleChange}
@@ -62,7 +62,7 @@ export const Contact = () => {
                 <div className="control-group">
                   <input
                     type="email"
-                    className="form-control"
+                    className="form-control border-secondary"
                     id="email"
                     placeholder="Your mail"
                     required="required"
@@ -74,7 +74,7 @@ export const Contact = () => {
                 </div>
                 <div className="control-group">
                   <select
-                    className="custom-select fs-5 mb-3"
+                    className="custom-select w-100 fs-5 p-2 border-secondary text-muted mb-3"
                     id="subject"
                     value={subject}
                     onChange={handleChange}
@@ -104,7 +104,7 @@ export const Contact = () => {
                 </div>
                 <div className="control-group">
                   <textarea
-                    className="form-control"
+                    className="form-control border-secondary"
                     rows="6"
                     id="message"
                     placeholder="Message"

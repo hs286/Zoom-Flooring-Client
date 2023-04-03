@@ -92,7 +92,7 @@ const Cart = ({ cartProducts }) => {
                 </div>
                 {total !== 0 ? (
                   <Link to={"/login"}>
-                    <button className="btn btn-block btn-primary my-3 py-3">
+                    <button className="btn btn-block btn-primary w-100 my-3 py-3">
                       Proceed To Checkout
                     </button>
                   </Link>

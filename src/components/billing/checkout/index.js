@@ -121,7 +121,7 @@ const Checkout = ({ cartProducts, token }) => {
                       onChange={handlePhone}
                     />
                     {error.phone && (
-                      <h5 style={{ color: "red" }}>{error.phone}</h5>
+                      <h4 style={{ color: "red" }}>{error.phone}</h4>
                     )}
                   </div>
                   <div className="col-md-6 form-group">
@@ -168,7 +168,7 @@ const Checkout = ({ cartProducts, token }) => {
                       className="form-control"
                       onChange={handleState}
                     />
-                    {error && <h5 style={{ color: "red" }}>{error.state}</h5>}
+                    {error && <h4 style={{ color: "red" }}>{error.state}</h4>}
                   </div>
                   <div className="col-md-6 form-group">
                     <label>ZIP Code</label>
@@ -192,19 +192,19 @@ const Checkout = ({ cartProducts, token }) => {
                 <div className="card-body">
                   <div className="row d-flex justify-content-between ">
                     <div className="col-lg-7 col-4 ">
-                      <h5>
+                      <h4>
                         <b className="text-primary">Product</b>
-                      </h5>
+                      </h4>
                     </div>
                     <div className="col-lg-3 col-5 ">
-                      <h5>
+                      <h4>
                         <b className="text-primary">Quantity</b>
-                      </h5>
+                      </h4>
                     </div>
                     <div className="col-lg-2 col-3">
-                      <h5>
+                      <h4>
                         <b className="text-primary">Price</b>
-                      </h5>
+                      </h4>
                     </div>
                   </div>
                 </div>
@@ -236,10 +236,10 @@ const Checkout = ({ cartProducts, token }) => {
                   );
                 })}
 
-                <div className="card-footer border-secondary bg-transparent">
+                <div className="card-footer bg-transparent">
                   <div className="d-flex justify-content-between mt-2">
-                    <h5 className="font-weight-bold text-primary">Total</h5>
-                    <h5 className="font-weight-bold text-info">$ {total}</h5>
+                    <h4 className="font-weight-bold text-primary">Total</h4>
+                    <h4 className="font-weight-bold text-info">$ {total}</h4>
                   </div>
                 </div>
               </div>
@@ -265,10 +265,10 @@ const Checkout = ({ cartProducts, token }) => {
                     </div>
                   </div>
                 </div>
-                <div className="card-footer border-secondary bg-transparent">
+                <div className="card-footer  bg-transparent">
                   <button
                     type="submit"
-                    className="btn btn-lg btn-block btn-primary font-weight-bold my-3 py-3"
+                    className="btn btn-lg btn-block btn-primary font-weight-bold my-3 "
                   >
                     Place Order
                   </button>
