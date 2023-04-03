@@ -55,7 +55,7 @@ export const addOrderDetails = (addressDetails, _id) => async (dispatch) => {
   });
   try {
     await axios.post(
-      `http://52.200.45.31/orderDetails`,
+      `${process.env.REACT_APP_API}/orderDetails`,
       { addressDetails, _id, cartServices },
       {
         headers: {

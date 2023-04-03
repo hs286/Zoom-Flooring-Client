@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const addContactUs = (contactData) => async (dispatch) => {
   try {
-     await axios.post(`http://52.200.45.31/contact`,contactData);
+     await axios.post(`${process.env.REACT_APP_API}/contact`,contactData);
     
   } catch (error) {
     

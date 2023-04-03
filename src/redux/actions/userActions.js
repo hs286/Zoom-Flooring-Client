@@ -11,7 +11,7 @@ export const userRegistered = (users,error) => ({
 
 export const registerUser = (userCredentials) => async (dispatch) => { 
   try {
-    const res = await axios.post(`http://52.200.45.31/user`,  userCredentials );
+    const res = await axios.post(`${process.env.REACT_APP_API}/user`,  userCredentials );
     toast.success("New user registered successfully")
     dispatch(userRegistered(res,false));
   } catch (error) {
@@ -28,7 +28,7 @@ export const userLogin = (users,error) => ({
 
 export const checkLoginCredentials = (userCredentials) => async (dispatch) => { 
   try {
-    const res = await axios.post(`http://52.200.45.31/user/login`,  userCredentials );
+    const res = await axios.post(`${process.env.REACT_APP_API}/user/login`,  userCredentials );
     toast.success("New user login successfully")
     localStorage.setItem('loginToken',(res.data.token))
     dispatch(userLogin(res,false));
@@ -40,7 +40,7 @@ export const checkLoginCredentials = (userCredentials) => async (dispatch) => {
 
 export const updateUserPassword = (userCredentials) => async (dispatch) => { 
   try {
-    const res = await axios.put(`http://52.200.45.31/user`,  userCredentials );
+    const res = await axios.put(`${process.env.REACT_APP_API}/user`,  userCredentials );
     toast.success("Password update successfully")
     dispatch(userLogin(res,false));
   } catch (error) {
