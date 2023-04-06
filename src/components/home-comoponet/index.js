@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 const HomeComoponet = ({ homeData }) => {
   var des = [];
+  console.log()
   homeData.map((slide) => (des = slide.description.split("\n")));
   return (
     <>
@@ -30,17 +31,11 @@ const HomeComoponet = ({ homeData }) => {
                 </div>
                 <div className=" col-lg-6 col-12" data-aos="fade-up">
                   <>
-                    {des.map((e, index) => {
-                      if (e.length < 20) {
-                        return (
-                          <p key={index} className="text-info fs-4">
-                            <b>{e}</b>
+                  <p>{slide.description}</p>
+                  <p className="text-info fs-4">
+                            <b>Get A Quote</b>
                           </p>
-                        );
-                      } else {
-                        return <p key={index}>{e}</p>;
-                      }
-                    })}
+                   
                     <Link to={"/contact"}>
                       <Button variant="secondary" className="fs-5">
                         Contact Us
